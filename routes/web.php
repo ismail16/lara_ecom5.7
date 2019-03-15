@@ -36,16 +36,12 @@ Route::group(['prefix' => 'cards'], function(){
   Route::post('/delete/{id}', 'frontend\CartsController@delete')->name('carts.delete');
 });
 
+
+
 Route::group(['prefix' => 'checkout'], function(){
   Route::get('/', 'frontend\CheckoutsController@index')->name('checkout');
-  // Route::post('/store', 'frontend\CartsController@store')->name('cards.store');
-  // Route::post('/update/{id}', 'frontend\CartsController@update')->name('carts.update');
-  // Route::post('/delete/{id}', 'frontend\CartsController@delete')->name('carts.delete');
-  // Route::post('/delete/{id}', 'frontend\CartsController@delete')->name('carts.delete');
+  Route::post('/store', 'frontend\CheckoutsController@store')->name('checkouts.store');
 });
-
-
-
 
 // admin routes start here
 Route::group(['prefix' => 'admin'],function(){
@@ -56,6 +52,15 @@ Route::group(['prefix' => 'admin'],function(){
   Route::post('/logout/submit', 'Auth\admin\LoginController@logout')->name('admin.logout.submit');
 
   Route::get('/', 'backend\adminController@index')->name('admin.index');
+
+  // Orders route
+  Route::group(['prefix' => '/orders'],function(){
+    Route::get('/', 'backend\OrdersController@manage')->name('admin.orders.manage');
+    Route::get('/details/{id}', 'backend\OrdersController@details')->name('admin.orders.details');
+    Route::post('/seen_by_admin/{id}', 'backend\OrdersController@seen_by_admin')->name('admin.orders.seen_by_admin');
+    Route::post('/delete/{id}', 'backend\OrdersController@delete')->name('admin.orders.delete');
+  });
+
   // category route
   Route::group(['prefix' => '/category'],function(){
     Route::get('/', 'backend\CategoryController@manage')->name('admin.category.manage');

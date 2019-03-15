@@ -8,15 +8,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Laravel | Ecommerce</title>
   <!-- plugins:css -->
-  <link rel="stylesheet" href="vendors/iconfonts/mdi/css/materialdesignicons.min.css">
-  <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
-  <link rel="stylesheet" href="vendors/css/vendor.bundle.addons.css">
+  <link rel="stylesheet" href="{{asset('public/backend_assets/vendor/mdi/css/materialdesignicons.min.css')}}">
+  <link rel="stylesheet" href="{{ asset('public/backend_assets/vendor/css/vendor.bundle.base.css')}}">
+  <link rel="stylesheet" href="{{ asset('public/backend_assets/vendor/css/vendor.bundle.addons.css')}}">
   <!-- endinject -->
   <!-- plugin css for this page -->
   <!-- End plugin css for this page -->
   <!-- inject:css -->
-  <link rel="stylesheet" href="{{asset('public/css/admin_style.css')}}">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="{{asset('public/backend_assets/style.css')}}">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
   <link rel="stylesheet" href="{{asset('public/css/jquery.dataTables.css')}}">
 
   <!-- endinject -->

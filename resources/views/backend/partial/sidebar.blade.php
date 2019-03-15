@@ -2,10 +2,10 @@
 <nav class="sidebar sidebar-offcanvas" id="sidebar">
   <ul class="nav">
     <li class="nav-item nav-profile">
-      <div class="nav-link">
-        <div class="user-wrapper">
+      <div class="nav-link" style="padding: 5px 35px !important;">
+        <div class="user-wrapper" style="margin-bottom: 0px !important;">
           <div class="profile-image">
-            <img src="{{ asset('public/frontend_assets/images/logo/logo.png')}}" alt="profile image">
+            <img src="{{ asset('public/frontend_assets/images/logo/profile.png')}}" alt="profile image">
           </div>
           <div class="text-wrapper">
             <p class="profile-name">Ismail Hossain</p>
@@ -15,20 +15,33 @@
             </div>
           </div>
         </div>
-        <button class="btn btn-success btn-block">New Project
-          <i class="mdi mdi-plus"></i>
-        </button>
       </div>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="index.html">
-        <i class="fa fa-car menu-icon mdi mdi-television"></i>
+      <a class="nav-link" href="{{ route('admin.index') }}">
+        <i class="fas fa-home menu-icon"></i>
         <span class="menu-title">Dashboard</span>
       </a>
     </li>
+
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="collapse" href="#order" aria-expanded="false" aria-controls="ui-basic">
+        <i class="fas fa-ambulance menu-icon"></i>
+        <span class="menu-title">Orders</span>
+        <i class="menu-arrow"></i>
+      </a>
+      <div class="collapse" id="order">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item">
+            <a class="nav-link" href="{{ route('admin.orders.manage') }}">Manage Orders</a>
+          </li>
+        </ul>
+      </div>
+    </li>
+
     <li class="nav-item">
       <a class="nav-link" data-toggle="collapse" href="#Category" aria-expanded="false" aria-controls="ui-basic">
-        <i class="fa fa-car menu-icon mdi mdi-content-copy"></i>
+        <i class="fa fa-list-alt menu-icon"></i>
         <span class="menu-title">Category</span>
         <i class="menu-arrow"></i>
       </a>
@@ -45,7 +58,7 @@
     </li>
     <li class="nav-item">
       <a class="nav-link" data-toggle="collapse" href="#Products" aria-expanded="false" aria-controls="ui-basic">
-        <i class="fa fa-car menu-icon mdi mdi-content-copy"></i>
+        <i class="fab fa-product-hunt menu-icon"></i>
         <span class="menu-title">Products</span>
         <i class="menu-arrow"></i>
       </a>
@@ -62,7 +75,7 @@
     </li>
     <li class="nav-item">
       <a class="nav-link" data-toggle="collapse" href="#Division" aria-expanded="false" aria-controls="ui-basic">
-        <i class="fa fa-car menu-icon mdi mdi-content-copy"></i>
+        <i class="fas fa-city menu-icon"></i>
         <span class="menu-title">Division</span>
         <i class="menu-arrow"></i>
       </a>
@@ -79,7 +92,7 @@
     </li>
     <li class="nav-item">
       <a class="nav-link" data-toggle="collapse" href="#District" aria-expanded="false" aria-controls="ui-basic">
-        <i class="fa fa-car menu-icon mdi mdi-content-copy"></i>
+        <i class="fas fa-city menu-icon"></i>
         <span class="menu-title">District</span>
         <i class="menu-arrow"></i>
       </a>
@@ -96,8 +109,6 @@
     </li>
     <li class="nav-item">
       <a class="nav-link" href="#">
-        <!-- <i class="fa fa-car menu-icon mdi mdi-backup-restore"></i> -->
-        <!-- <span class="menu-title"> -->
           <form method="POST" action="{{ route('admin.logout.submit') }}">
               @csrf
               <button type="submit" class="btn btn-danger">Logout</button>

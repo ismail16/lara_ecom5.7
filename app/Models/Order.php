@@ -21,10 +21,15 @@ class Order extends Model
 
   public function user()
   {
-    return $this->belongsTo(User::class)
+    return $this->belongsTo(User::class);
   }
   public function carts()
   {
-    return $this->belongsTo(Cart::class)
+    return $this->belongsTo(Cart::class);
   }
+
+  // public function order_details()
+  // {
+  //     return $this->hasMany(Order_detail::class);
+  // }
 }

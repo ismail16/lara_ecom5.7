@@ -60,7 +60,6 @@ class ProductController extends Controller
             $image_no++;
           }
         }
-
         return back();
     }
 

@@ -139,7 +139,6 @@
 <!-- //Main wrapper -->
 
 <!-- JS Files -->
-<script src="{{ asset('public/frontend_assets/js/vendor/jquery-3.2.1.min.js')}}"></script>
 <script src="{{ asset('public/frontend_assets/js/popper.min.js')}}"></script>
 <script src="{{ asset('public/frontend_assets/js/bootstrap.min.js')}}"></script>
 <script src="{{ asset('public/frontend_assets/js/plugins.js')}}"></script>

@@ -9,7 +9,7 @@
     </a>
   </div>
   <div class="navbar-menu-wrapper d-flex align-items-center">
-    <ul class="navbar-nav navbar-nav-left header-links d-none d-md-flex">
+    <!-- <ul class="navbar-nav navbar-nav-left header-links d-none d-md-flex">
       <li class="nav-item">
         <a href="#" class="nav-link">Schedule
           <span class="badge badge-primary ml-1">New</span>
@@ -23,9 +23,9 @@
         <a href="#" class="nav-link">
           <i class="mdi mdi-bookmark-plus-outline"></i>Score</a>
       </li>
-    </ul>
+    </ul> -->
     <ul class="navbar-nav navbar-nav-right">
-      <li class="nav-item dropdown">
+      <!-- <li class="nav-item dropdown">
         <a class="nav-link count-indicator dropdown-toggle" id="messageDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
           <i class="mdi mdi-file-document-box"></i>
           <span class="count">7</span>
@@ -79,8 +79,8 @@
             </div>
           </a>
         </div>
-      </li>
-      <li class="nav-item dropdown">
+      </li> -->
+      <!-- <li class="nav-item dropdown">
         <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
           <i class="mdi mdi-bell"></i>
           <span class="count">4</span>
@@ -134,14 +134,16 @@
             </div>
           </a>
         </div>
-      </li>
+      </li> -->
       <li class="nav-item dropdown d-none d-xl-inline-block">
         <a class="nav-link dropdown-toggle" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
-          <span class="profile-text">Hello, Richard V.Welsh !</span>
-          <img class="img-xs rounded-circle" src="{{ asset('public/frontend_assets/images/logo/logo.png')}}" alt="Profile image">
+
+          <span class="profile-text">Admin</span>
+
+          <img class="img-xs rounded-circle" src="{{ asset('public/frontend_assets/images/logo/profile.png')}}" alt="Profile image">
         </a>
         <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
-          <a class="dropdown-item p-0">
+          <!-- <a class="dropdown-item p-0">
             <div class="d-flex border-bottom">
               <div class="py-3 px-4 d-flex align-items-center justify-content-center">
                 <i class="mdi mdi-bookmark-plus-outline mr-0 text-gray"></i>
@@ -153,18 +155,21 @@
                 <i class="mdi mdi-alarm-check mr-0 text-gray"></i>
               </div>
             </div>
-          </a>
+          </a> -->
           <a class="dropdown-item mt-2">
-            Manage Accounts
+            <button type="submit" class="btn btn-primary">Accounts</button>
           </a>
-          <a class="dropdown-item">
+          <!-- <a class="dropdown-item">
             Change Password
           </a>
           <a class="dropdown-item">
             Check Inbox
-          </a>
+          </a> -->
           <a class="dropdown-item">
-            Sign Out
+            <form method="POST" action="{{ route('admin.logout.submit') }}">
+                @csrf
+                <button type="submit" class="btn btn-danger">Sign Out</button>
+            </form>
           </a>
         </div>
       </li>
