@@ -62,7 +62,12 @@ class CartsController extends Controller
       $cart->save();
     }
     session()->flash('success', 'Product has add to cart !!');
-    return back();
+
+    if ($request->search_product == 'search_product') {
+       return redirect()->route('products');
+    }else{
+      return back();
+    }
 
   }
 

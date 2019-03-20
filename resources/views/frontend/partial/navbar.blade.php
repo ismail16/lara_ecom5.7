@@ -4,7 +4,7 @@
     <div class="row">
       <div class="col-md-6 col-sm-6 col-6 col-lg-2">
         <div class="logo">
-          <a href="index.html">
+          <a href="{{ route('index') }}">
             <img src="{{ asset('public/frontend_assets/images/logo/logo.png')}}" alt="logo images">
           </a>
         </div>
@@ -17,48 +17,11 @@
             <li class="drop"><a href="shop-grid.html">Books</a>
               <div class="megamenu mega03">
                 <ul class="item item03">
-                  <li class="title">Categories</li>
-                  <li><a href="shop-grid.html">Biography </a></li>
-                  <li><a href="shop-grid.html">Business </a></li>
-                  <li><a href="shop-grid.html">Cookbooks </a></li>
-                  <li><a href="shop-grid.html">Health & Fitness </a></li>
-                  <li><a href="shop-grid.html">History </a></li>
-                </ul>
-                <ul class="item item03">
-                  <li class="title">Customer Favourite</li>
-                  <li><a href="shop-grid.html">Mystery</a></li>
-                  <li><a href="shop-grid.html">Religion & Inspiration</a></li>
-                  <li><a href="shop-grid.html">Romance</a></li>
-                  <li><a href="shop-grid.html">Fiction/Fantasy</a></li>
-                  <li><a href="shop-grid.html">Sleeveless</a></li>
-                </ul>
-                <ul class="item item03">
-                  <li class="title">Collections</li>
-                  <li><a href="shop-grid.html">Science </a></li>
-                  <li><a href="shop-grid.html">Fiction/Fantasy</a></li>
-                  <li><a href="shop-grid.html">Self-Improvemen</a></li>
-                  <li><a href="shop-grid.html">Home & Garden</a></li>
-                  <li><a href="shop-grid.html">Humor Books</a></li>
-                </ul>
-              </div>
-            </li>
-            <li class="drop"><a href="#">Pages</a>
-              <div class="megamenu dropdown">
-                <ul class="item item01">
-                  <li><a href="about.html">About Page</a></li>
-                  <li class="label2"><a href="portfolio.html">Portfolio</a>
-                    <ul>
-                      <li><a href="portfolio.html">Portfolio</a></li>
-                      <li><a href="portfolio-details.html">Portfolio Details</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="my-account.html">My Account</a></li>
-                  <li><a href="cart.html">Cart Page</a></li>
-                  <li><a href="checkout.html">Checkout Page</a></li>
-                  <li><a href="wishlist.html">Wishlist Page</a></li>
-                  <li><a href="error404.html">404 Page</a></li>
-                  <li><a href="faq.html">Faq Page</a></li>
-                  <li><a href="team.html">Team Page</a></li>
+                  <li style="font-size: 20px">Category</li>
+                  @foreach(App\Models\Category::orderBy('id', 'desc')->get() as $category)
+                  <!-- <option value="{{ $category->id }}">{{ $category->name }}</option> -->
+                  <li><a href="{{ route('products') }}">{{ $category->name }}</a></li>
+                  @endforeach
                 </ul>
               </div>
             </li>
@@ -77,119 +40,42 @@
       <div class="col-md-6 col-sm-6 col-6 col-lg-2">
         <ul class="header__sidebar__right d-flex justify-content-end align-items-center">
           <!-- <li class="shop_search"><a class="search__active" href="#"></a></li> -->
-          <li class="wishlist"><a href="#"></a></li>
+          <!-- <li class="wishlist"><a href="#"></a></li> -->
           <li class="shopcart"><a class="_cartbox_active" href="{{ route('carts') }}"><span class="product_qun">{{ App\Models\Cart::totalItems() }}</span></a>
-            <!-- Start Shopping Cart -->
-            <!-- <div class="block-minicart minicart__active">
-              <div class="minicart-content-wrapper">
-                <div class="micart__close">
-                  <span>close</span>
-                </div>
-                <div class="items-total d-flex justify-content-between">
-                  <span>3 items</span>
-                  <span>Cart Subtotal</span>
-                </div>
-                <div class="total_amount text-right">
-                  <span>$66.00</span>
-                </div>
-                <div class="mini_action checkout">
-                  <a class="checkout__btn" href="cart.html">Go to Checkout</a>
-                </div>
-                <div class="single__items">
-                  <div class="miniproduct">
-                    <div class="item01 d-flex">
-                      <div class="thumb">
-                        <a href="product-details.html"><img src="{{ asset('frontend_assets/="images/product/sm-img/1.jpg')}}" alt="product images"></a>
-                      </div>
-                      <div class="content">
-                        <h6><a href="product-details.html">Voyage Yoga Bag</a></h6>
-                        <span class="prize">$30.00</span>
-                        <div class="product_prize d-flex justify-content-between">
-                          <span class="qun">Qty: 01</span>
-                          <ul class="d-flex justify-content-end">
-                            <li><a href="#"><i class="zmdi zmdi-settings"></i></a></li>
-                            <li><a href="#"><i class="zmdi zmdi-delete"></i></a></li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="item01 d-flex mt--20">
-                      <div class="thumb">
-                        <a href="product-details.html"><img src="{{ asset('frontend_assets/="images/product/sm-img/3.jpg')}}" alt="product images"></a>
-                      </div>
-                      <div class="content">
-                        <h6><a href="product-details.html">Impulse Duffle</a></h6>
-                        <span class="prize">$40.00</span>
-                        <div class="product_prize d-flex justify-content-between">
-                          <span class="qun">Qty: 03</span>
-                          <ul class="d-flex justify-content-end">
-                            <li><a href="#"><i class="zmdi zmdi-settings"></i></a></li>
-                            <li><a href="#"><i class="zmdi zmdi-delete"></i></a></li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="item01 d-flex mt--20">
-                      <div class="thumb">
-                        <a href="product-details.html"><img src="{{ asset('frontend_assets/images/product/sm-img/2.jpg')}}" alt="product images"></a>
-                      </div>
-                      <div class="content">
-                        <h6><a href="product-details.html">Compete Track Tote</a></h6>
-                        <span class="prize">$40.00</span>
-                        <div class="product_prize d-flex justify-content-between">
-                          <span class="qun">Qty: 03</span>
-                          <ul class="d-flex justify-content-end">
-                            <li><a href="#"><i class="zmdi zmdi-settings"></i></a></li>
-                            <li><a href="#"><i class="zmdi zmdi-delete"></i></a></li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="mini_action cart">
-                  <a class="cart__btn" href="cart.html">View and edit cart</a>
-                </div>
-              </div>
-            </div> -->
-            <!-- End Shopping Cart -->
           </li>
 
           @guest
-            <li class="nav-item">
-              <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-            </li>
-            @if (Route::has('register'))
-              <li class="nav-item">
-                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-              </li>
-            @endif
-            @else
-            <li class="nav-item dropdown">
-              <!-- <img src="{{ App\Helpers\ImageHelper::getUserImage(Auth::user()->id) }}" class="img rounded-circle" style="width:40px"> -->
-              <img src="{{ App\Helpers\ImageHelper::getUserImage(Auth::user()->id) }}" class="rounded-circle" style="width:40px;">
-              <p>&nbsp;&nbsp;{{ Auth::user()->first_name }}<span class="caret"></span></p>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+          </li>
+          @if (Route::has('register'))
+          <li class="nav-item">
+            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+          </li>
+          @endif
+          @else
+          <li class="nav-item dropdown">
+            <img src="{{ App\Helpers\ImageHelper::getUserImage(Auth::user()->id) }}" class="rounded-circle" style="width:40px;">
+            <p>&nbsp;&nbsp;{{ Auth::user()->first_name }}<span class="caret"></span></p>
 
-              <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre></a>
+            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre></a>
 
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                <small><a class="dropdown-item" href="{{ route('user.dashboard') }}">Profile</a></small>
-                <small><a class="dropdown-item" href="{{ route('logout') }}"
-                  onclick="event.preventDefault();
-                  document.getElementById('logout-form').submit();">
-                  {{ __('Logout') }}
-                </a></small>
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                  @csrf
-                </form>
-              </div>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+              <small><a class="dropdown-item" href="{{ route('user.dashboard') }}">Profile</a></small>
+              <small><a class="dropdown-item" href="{{ route('logout') }}"
+                onclick="event.preventDefault();
+                document.getElementById('logout-form').submit();">
+                {{ __('Logout') }}
+              </a></small>
+              <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                @csrf
+              </form>
+            </div>
 
-            </li>
+          </li>
           @endguest
 
-
           <!-- <li class="setting__bar__icon"><a class="setting__active" href="#"></a>
-
             <div class="searchbar__content setting__block">
               <div class="content-inner">
                 <div class="switcher-currency">
@@ -210,31 +96,30 @@
                 </div>
               </div>
             </div>
-
           </li> -->
-
         </ul>
       </div>
     </div>
 
-    <div class="row" style="background-color:black; margin:auto 200px;">
+    <div class="row" style="background-color:black; margin:auto 300px;">
       <div class="col-md-12">
-        <div class="input-group mb-2 mt-2">
-          <form>
-            <div class="form-row align-items-center">
-              <div class="col-auto my-1">
-                <!-- <label class="mr-sm-2" for="inlineFormCustomSelect">Preference</label> -->
-                <select class="custom-select mr-2" id="inlineFormCustomSelect">
-                  <option selected>Choose...</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
+        <div class="input-group mb-2 mt-2 d-flex justify-content-center">
+          <form method="POST" action="{{ route('search.product') }}">
+            @csrf
+            <div class="input-group mb-3">
+              <div class="input-group-prepend mr-1">
+                <select class="custom-select mr-2" id="product_category_selector">
+                  <option value="">Select Category</option>
+                  @foreach(App\Models\Category::orderBy('id', 'desc')->get() as $category)
+                  <option value="{{ $category->id }}">{{ $category->name }}</option>
+                  @endforeach
                 </select>
               </div>
+              <input type="hidden" name="category_id" id="select_category_id"  value="" class="form-control">
+              <input type="text" name="search_keyword" class="form-control" aria-label="Text input with dropdown button">
+              <button type="submit" class="ml-1">Search</button>
             </div>
-          </form>
-          <input type="text" class="form-control mr-2 col-auto my-1" aria-label="Text input with segmented dropdown button">
-          <button type="button" class="btn btn-outline-secondary col-auto my-1"><i class="fa fa-search"></i></button>
+          </form>          
         </div>
       </div>
     </div>

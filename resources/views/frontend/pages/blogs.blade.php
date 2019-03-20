@@ -3,7 +3,7 @@
 @section('content')
 
 <!-- Start Bradcaump area -->
-<div class="ht__bradcaump__area bg-image--4">
+<div class="ht__bradcaump__area bg-image--6">
 		<div class="container">
 				<div class="row">
 						<div class="col-lg-12">
@@ -32,20 +32,20 @@
 					<!-- Start Single Post -->
 					<article class="blog__post d-flex flex-wrap">
 						<div class="thumb">
-							<a href="blog-details.html">
+							<a href="{{ route('blog_details') }}">
 								<img src="{{ asset('public/frontend_assets/images/blog/blog-3/1.jpg') }}" alt="blog images">
 							</a>
 						</div>
 						<div class="content">
-							<h4><a href="blog-details.html">Blog image post</a></h4>
+							<h4><a href="{{ route('blog_details') }}">Blog image post</a></h4>
 							<ul class="post__meta">
-								<li>Posts by : <a href="#">road theme</a></li>
+								<li>Posts by : <a href="{{ route('blog_details') }}">road theme</a></li>
 								<li class="post_separator">/</li>
 								<li>Mar 10 2018</li>
 							</ul>
 							<p>Donec vitae hendrerit arcu, sit amet faucibus nisl. Crastoup pretium arcu ex. Aenean posuere libero eu augue rhoncus Praesent ornare tortor amet.</p>
 							<div class="blog__btn">
-								<a href="blog-details.html">read more</a>
+								<a href="{{ route('blog_details') }}">read more</a>
 							</div>
 						</div>
 					</article>
@@ -53,20 +53,20 @@
 					<!-- Start Single Post -->
 					<article class="blog__post d-flex flex-wrap">
 						<div class="thumb">
-							<a href="blog-details.html">
+							<a href="{{ route('blog_details') }}">
 								<img src="{{ asset('public/frontend_assets/images/blog/blog-3/2.jpg') }}" alt="blog images">
 							</a>
 						</div>
 						<div class="content">
-							<h4><a href="blog-details.html">Post with Gallery</a></h4>
+							<h4><a href="{{ route('blog_details') }}">Post with Gallery</a></h4>
 							<ul class="post__meta">
-								<li>Posts by : <a href="#">road theme</a></li>
+								<li>Posts by : <a href="{{ route('blog_details') }}">road theme</a></li>
 								<li class="post_separator">/</li>
 								<li>Mar 10 2018</li>
 							</ul>
 							<p>Donec vitae hendrerit arcu, sit amet faucibus nisl. Crastoup pretium arcu ex. Aenean posuere libero eu augue rhoncus Praesent ornare tortor amet.</p>
 							<div class="blog__btn">
-								<a href="blog-details.html">read more</a>
+								<a href="{{ route('blog_details') }}">read more</a>
 							</div>
 						</div>
 					</article>
@@ -74,82 +74,25 @@
 					<!-- Start Single Post -->
 					<article class="blog__post d-flex flex-wrap">
 						<div class="thumb">
-							<a href="blog-details.html">
+							<a href="{{ route('blog_details') }}">
 								<img src="{{ asset('public/frontend_assets/images/blog/blog-3/3.jpg') }}" alt="blog images">
 							</a>
 						</div>
 						<div class="content">
-							<h4><a href="blog-details.html">Post with Gallery</a></h4>
+							<h4><a href="{{ route('blog_details') }}">Post with Gallery</a></h4>
 							<ul class="post__meta">
-								<li>Posts by : <a href="#">road theme</a></li>
+								<li>Posts by : <a href="{{ route('blog_details') }}">road theme</a></li>
 								<li class="post_separator">/</li>
 								<li>Mar 10 2018</li>
 							</ul>
 							<p>Donec vitae hendrerit arcu, sit amet faucibus nisl. Crastoup pretium arcu ex. Aenean posuere libero eu augue rhoncus Praesent ornare tortor amet.</p>
 							<div class="blog__btn">
-								<a href="blog-details.html">read more</a>
+								<a href="{{ route('blog_details') }}">read more</a>
 							</div>
 						</div>
 					</article>
 					<!-- End Single Post -->
-					<!-- Start Single Post -->
-					<article class="blog__post d-flex flex-wrap">
-						<div class="thumb">
-							<a href="blog-details.html">
-								<img src="{{ asset('public/frontend_assets/images/blog/blog-3/4.jpg') }}" alt="blog images">
-							</a>
-						</div>
-						<div class="content">
-							<h4><a href="blog-details.html">Blog image post</a></h4>
-							<ul class="post__meta">
-								<li>Posts by : <a href="#">road theme</a></li>
-								<li class="post_separator">/</li>
-								<li>Mar 10 2018</li>
-							</ul>
-							<p>Donec vitae hendrerit arcu, sit amet faucibus nisl. Crastoup pretium arcu ex. Aenean posuere libero eu augue rhoncus Praesent ornare tortor amet.</p>
-							<div class="blog__btn">
-								<a href="blog-details.html">read more</a>
-							</div>
-						</div>
-					</article>
-					<!-- End Single Post -->
-					<!-- Start Single Post -->
-					<article class="blog__post d-flex flex-wrap">
-						<div class="thumb">
-							<a href="blog-details.html">
-								<img src="{{ asset('public/frontend_assets/images/blog/blog-3/5.jpg') }}" alt="blog images">
-							</a>
-						</div>
-						<div class="content">
-							<h4><a href="blog-details.html">Blog image post</a></h4>
-							<ul class="post__meta">
-								<li>Posts by : <a href="#">road theme</a></li>
-								<li class="post_separator">/</li>
-								<li>Mar 10 2018</li>
-							</ul>
-							<p>Donec vitae hendrerit arcu, sit amet faucibus nisl. Crastoup pretium arcu ex. Aenean posuere libero eu augue rhoncus Praesent ornare tortor amet.</p>
-							<div class="blog__btn">
-								<a href="blog-details.html">read more</a>
-							</div>
-						</div>
-					</article>
-					<!-- End Single Post -->
-					<!-- Start Single Post -->
-					<article class="blog__post text--post">
-						<div class="content">
-							<h4><a href="blog-details.html">Blog image post</a></h4>
-							<ul class="post__meta">
-								<li>Posts by : <a href="#">road theme</a></li>
-								<li class="post_separator">/</li>
-								<li>Mar 10 2018</li>
-							</ul>
-							<p>Donec vitae hendrerit arcu, sit amet faucibus nisl. Crastoup pretium arcu ex. Aenean posuere libero eu augue rhoncus Praesent ornare tortor amet.</p>
-							<div class="blog__btn">
-								<a href="blog-details.html">read more</a>
-							</div>
-						</div>
-					</article>
-					<!-- End Single Post -->
+
 				</div>
 				<ul class="wn__pagination">
 					<li class="active"><a href="#">1</a></li>
@@ -183,7 +126,7 @@
 											<a href="blog-details.html"><img src="{{ asset('public/frontend_assets/images/blog/sm-img/1.jpg') }}" alt="blog images"></a>
 										</div>
 										<div class="content">
-											<h4><a href="blog-details.html">Blog image post</a></h4>
+											<h4><a href="{{ route('blog_details') }}">Blog image post</a></h4>
 											<p>	March 10, 2015</p>
 										</div>
 									</div>
@@ -191,47 +134,15 @@
 								<li>
 									<div class="post-wrapper d-flex">
 										<div class="thumb">
-											<a href="blog-details.html"><img src="{{ asset('public/frontend_assets/images/blog/sm-img/2.jpg') }}" alt="blog images"></a>
+											<a href="{{ route('blog_details') }}"><img src="{{ asset('public/frontend_assets/images/blog/sm-img/2.jpg') }}" alt="blog images"></a>
 										</div>
 										<div class="content">
-											<h4><a href="blog-details.html">Post with Gallery</a></h4>
+											<h4><a href="{{ route('blog_details') }}">Post with Gallery</a></h4>
 											<p>	March 10, 2015</p>
 										</div>
 									</div>
 								</li>
-								<li>
-									<div class="post-wrapper d-flex">
-										<div class="thumb">
-											<a href="blog-details.html"><img src="{{ asset('public/frontend_assets/images/blog/sm-img/3.jpg') }}" alt="blog images"></a>
-										</div>
-										<div class="content">
-											<h4><a href="blog-details.html">Post with Video</a></h4>
-											<p>	March 10, 2015</p>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="post-wrapper d-flex">
-										<div class="thumb">
-											<a href="blog-details.html"><img src="{{ asset('public/frontend_assets/images/blog/sm-img/4.jpg') }}" alt="blog images"></a>
-										</div>
-										<div class="content">
-											<h4><a href="blog-details.html">Maecenas ultricies</a></h4>
-											<p>	March 10, 2015</p>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="post-wrapper d-flex">
-										<div class="thumb">
-											<a href="blog-details.html"><img src="{{ asset('public/frontend_assets/images/blog/sm-img/5.jpg') }}" alt="blog images"></a>
-										</div>
-										<div class="content">
-											<h4><a href="blog-details.html">Blog image post</a></h4>
-											<p>	March 10, 2015</p>
-										</div>
-									</div>
-								</li>
+
 							</ul>
 						</div>
 					</aside>
@@ -240,28 +151,6 @@
 					<aside class="widget comment_widget">
 						<h3 class="widget-title">Comments</h3>
 						<ul>
-							<li>
-								<div class="post-wrapper">
-									<div class="thumb">
-										<img src="{{ asset('public/frontend_assets/images/blog/comment/1.jpeg') }}" alt="Comment images">
-									</div>
-									<div class="content">
-										<p>demo says:</p>
-										<a href="#">Quisque semper nunc vitae...</a>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="post-wrapper">
-									<div class="thumb">
-										<img src="{{ asset('public/frontend_assets/images/blog/comment/1.jpeg') }}" alt="Comment images">
-									</div>
-									<div class="content">
-										<p>Admin says:</p>
-										<a href="#">Curabitur aliquet pulvinar...</a>
-									</div>
-								</div>
-							</li>
 							<li>
 								<div class="post-wrapper">
 									<div class="thumb">
@@ -284,17 +173,6 @@
 									</div>
 								</div>
 							</li>
-							<li>
-								<div class="post-wrapper">
-									<div class="thumb">
-										<img src="{{ asset('public/frontend_assets/images/blog/comment/1.jpeg') }}" alt="Comment images">
-									</div>
-									<div class="content">
-										<p>demo says:</p>
-										<a href="#">Quisque semper nunc vitae...</a>
-									</div>
-								</div>
-							</li>
 						</ul>
 					</aside>
 					<!-- End Single Widget -->
@@ -305,10 +183,6 @@
 							<li><a href="#">Fashion</a></li>
 							<li><a href="#">Creative</a></li>
 							<li><a href="#">Electronics</a></li>
-							<li><a href="#">Kids</a></li>
-							<li><a href="#">Flower</a></li>
-							<li><a href="#">Books</a></li>
-							<li><a href="#">Jewelle</a></li>
 						</ul>
 					</aside>
 					<!-- End Single Widget -->
@@ -318,9 +192,6 @@
 						<ul>
 							<li><a href="#">March 2015</a></li>
 							<li><a href="#">December 2014</a></li>
-							<li><a href="#">November 2014</a></li>
-							<li><a href="#">September 2014</a></li>
-							<li><a href="#">August 2014</a></li>
 						</ul>
 					</aside>
 					<!-- End Single Widget -->

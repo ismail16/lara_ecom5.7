@@ -20,12 +20,12 @@
                 <li><a href="#"><i class="bi bi-youtube"></i></a></li>
               </ul>
               <ul class="mainmenu d-flex justify-content-center">
-                <li><a href="index.html">Trending</a></li>
-                <li><a href="index.html">Best Seller</a></li>
-                <li><a href="index.html">All Product</a></li>
-                <li><a href="index.html">Wishlist</a></li>
-                <li><a href="index.html">Blog</a></li>
-                <li><a href="index.html">Contact</a></li>
+                <li><a href="">Trending</a></li>
+                <li><a href="">Best Seller</a></li>
+                <li><a href="{{ route('products') }}">All Product</a></li>
+                <li><a href="">Wishlist</a></li>
+                <li><a href="{{route('blogs')}}">Blog</a></li>
+                <li><a href="{{ route('contract') }}">Contact</a></li>
               </ul>
             </div>
           </div>
@@ -136,6 +136,7 @@
 </div>
 <!-- END QUICKVIEW PRODUCT -->
 </div>
+
 <!-- //Main wrapper -->
 
 <!-- JS Files -->
@@ -204,6 +205,49 @@ $('.button-group').each( function( i, buttonGroup ) {
 });
 
 
+
+</script>
+
+<script type="text/javascript">
+
+function search_product() {
+    var category_id = $("#product_category_selector").val();
+    var search_keyword = $("#search_keyword").val();
+    var csrf_token = '<?php echo csrf_token() ?>';
+
+    console.log(category_id);
+    console.log(search_keyword);
+    console.log(csrf_token);
+
+    $.ajax({
+        url: "{{ route('search.product') }}",
+        type: 'GET',
+        data: {'category_id':category_id, 'search_keyword':search_keyword},
+        dataType: 'json',
+        success: function(data) {
+
+          // var html = '';
+          // html += '<div class="container">'
+          //   html += '<div class="row">'
+          //     for (var i = 0; i < data.length; i++) {
+          //       html += '<div class="col-md-4">'
+          //         html += '<p>'data.id'</p>'
+          //       html += '</div>'
+          //     }
+          //   html += '</div>'
+          // html += '</div>'
+
+          $("#product_serch_result").prepend(html);
+
+
+        }
+    });
+
+}
+
+$("#product_category_selector").change(function(){
+  $('#select_category_id').val(this.value)
+});
 </script>
 
 </body>

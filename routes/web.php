@@ -1,24 +1,16 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
 Route::get('/', 'frontend\PagesController@index')->name('index');
 Route::get('/products', 'frontend\PagesController@products')->name('products');
+Route::group(['prefix' => 'search'], function(){
+  Route::POST('/product', 'frontend\PagesController@search')->name('search.product');
+});
 Route::get('/category/{category_id}', 'frontend\PagesController@productsByCategory')->name('productsByCategory');
 Route::get('/product/{id}', 'frontend\PagesController@single_product')->name('single_product');
 Route::get('/contract', 'frontend\PagesController@contract')->name('contract');
+
 Route::get('/blogs', 'frontend\PagesController@blogs')->name('blogs');
 Route::get('/blog-details', 'frontend\PagesController@blog_details')->name('blog_details');
-
 
 
 Route::group(['prefix' => 'user'], function(){
@@ -27,6 +19,7 @@ Route::group(['prefix' => 'user'], function(){
   Route::get('/profile', 'frontend\UsersController@profile')->name('user.profile');
   Route::post('/profile/update', 'frontend\UsersController@profileUpdate')->name('user.profile.update');
 });
+
 
 Route::group(['prefix' => 'cards'], function(){
   Route::get('/', 'frontend\CartsController@index')->name('carts');
@@ -38,20 +31,23 @@ Route::group(['prefix' => 'cards'], function(){
 
 
 
+
+
 Route::group(['prefix' => 'checkout'], function(){
   Route::get('/', 'frontend\CheckoutsController@index')->name('checkout');
   Route::post('/store', 'frontend\CheckoutsController@store')->name('checkouts.store');
 });
 
+
 // admin routes start here
 Route::group(['prefix' => 'admin'],function(){
-
   //admin login
   Route::get('/login', 'Auth\admin\LoginController@showLoginForm')->name('admin.login');
   Route::post('/login/submit', 'Auth\admin\LoginController@login')->name('admin.login.submit');
-  Route::post('/logout/submit', 'Auth\admin\LoginController@logout')->name('admin.logout.submit');
+  
+  Route::get('/', 'backend\PagesController@index')->name('admin.index');
 
-  Route::get('/', 'backend\adminController@index')->name('admin.index');
+  Route::post('/logout/submit', 'Auth\admin\LoginController@logout')->name('admin.logout.submit');
 
   // Orders route
   Route::group(['prefix' => '/orders'],function(){

@@ -654,6 +654,7 @@ a {
   background-size: cover;
   background-position: center center; }
 .bg-image--6 {
+  /* public/frontend_assets/images/blog/banner.jpg */
   background-image: url(images/bg/6.jpg);
   background-repeat: no-repeat;
   background-size: cover;

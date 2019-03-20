@@ -17,25 +17,20 @@ class RedirectIfAuthenticated
      */
     public function handle($request, Closure $next, $guard = null)
     {
+
         switch ($guard) {
-          case 'admin':
+            case 'admin':
             if (Auth::guard($guard)->check()) {
-              $logedin = 'admin.index';
-            }
-            break;
-          case 'web':
-            if (Auth::guard($guard)->check()) {
-              $logedin = 'user.dashboard';
+                return redirect()->route('admin.index');
             }
             break;
 
-            return redirect()->route($logedin);
+            case 'web':
+            if (Auth::guard($guard)->check()) {
+                return redirect()->route('user.dashboard');
+            }
+            break;
         }
-        
-        // if (Auth::guard($guard)->check()) {
-        //     return redirect('/home');
-        // }
-
         return $next($request);
     }
 }

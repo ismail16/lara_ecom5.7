@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="{{asset('public/css/jquery.dataTables.css')}}">
 
   <!-- endinject -->
-  <link rel="shortcut icon" href="images/favicon.png" />
+  <link rel="shortcut icon" href="{{ asset('public/frontend_assets/images/logo/logo.png')}}" />
 </head>
 
 <body>

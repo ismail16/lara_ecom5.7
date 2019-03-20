@@ -8,7 +8,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- Favicons -->
-	<link rel="shortcut icon" href="{{ asset('public/frontend_assets/images/favicon.ico')}}">
+	<link rel="shortcut icon" href="{{ asset('public/frontend_assets/images/logo/logo.png')}}">
 	<link rel="apple-touch-icon" href="{{ asset('public/frontend_assets/images/icon.png')}}">
 
 	<!-- Google font (font-family: 'Roboto', sans-serif; Poppins ; Satisfy) -->
@@ -28,7 +28,7 @@
 	<!-- Modernizer js -->
 	<script src="{{ asset('public/frontend_assets/js/vendor/modernizr-3.5.0.min.js')}}"></script>
 	<script src="{{ asset('public/frontend_assets/js/vendor/jquery-3.2.1.min.js')}}"></script>
-	
+
 </head>
 <body>
 	<!--[if lte IE 9]>

@@ -8,12 +8,12 @@
 		<div class="row">
 			<div class="col-lg-12">
 				<div class="bradcaump__inner text-center">
-					<h2 class="bradcaump-title">Blog Details</h2>
+					<!-- <h2 class="bradcaump-title">Blog Details</h2>
 					<nav class="bradcaump-content">
 						<a class="breadcrumb_item" href="index.html">Home</a>
 						<span class="brd-separetor">/</span>
 						<span class="breadcrumb_item active">Blog-Details</span>
-					</nav>
+					</nav> -->
 				</div>
 			</div>
 		</div>
@@ -42,11 +42,11 @@
 							<div class="post_content">
 								<p>Donec vitae hendrerit arcu, sit amet faucibus nisl. Crastoup pretium arcu ex. Aenean posuere libero eu augue rhoncus. Praesent ornare tortor ac ante egestas hendrerit. Aliquam et metus pharetra, bibendum massa nec, fermentum odio. Nunc id leo ultrices, mollis ligula in, finibus tortor. Mauris eu dui ut lectus fermentum eleifend. Pellentesque faucibus sem ante, non malesuada odio varius nec. Suspendisse potenti. Proin consectetur aliquam odio nec fringilla. Sed interdum at justo in efficitur. Vivamus gravida volutpat sodales. Fusce ornare sit amet ligula condimentum sagittis.</p>
 
-								<blockquote>Lorem ipsum dolor sit amet, consecte adipisicing elit, sed do eiusmod tempor deo incididunt labo dolor magna aliqua. Ut enim ad minim veniam quis nostrud geolans work.</blockquote>
+								<blockquote>Consecte adipisicing elit, sed do eiusmod tempor deo incididunt labo dolor magna aliqua. Ut enim ad minim veniam quis nostrud geolans work.</blockquote>
 
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehendrit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+								<p>Tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehendrit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
 
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore of to magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehnderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia dser mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo.</p>
+								<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehnderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia dser mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo.</p>
 
 							</div>
 							<ul class="blog_meta">
@@ -138,28 +138,7 @@
 						<h3 class="widget-title">Recent</h3>
 						<div class="recent-posts">
 							<ul>
-								<li>
-									<div class="post-wrapper d-flex">
-										<div class="thumb">
-											<a href="blog-details.html"><img src="{{ asset('public/frontend_assets/images/blog/sm-img/1.jpg') }}" alt="blog images"></a>
-										</div>
-										<div class="content">
-											<h4><a href="blog-details.html">Blog image post</a></h4>
-											<p>	March 10, 2015</p>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="post-wrapper d-flex">
-										<div class="thumb">
-											<a href="blog-details.html"><img src="{{ asset('public/frontend_assets/images/blog/sm-img/2.jpg') }}" alt="blog images"></a>
-										</div>
-										<div class="content">
-											<h4><a href="blog-details.html">Post with Gallery</a></h4>
-											<p>	March 10, 2015</p>
-										</div>
-									</div>
-								</li>
+
 								<li>
 									<div class="post-wrapper d-flex">
 										<div class="thumb">
@@ -178,17 +157,6 @@
 										</div>
 										<div class="content">
 											<h4><a href="blog-details.html">Maecenas ultricies</a></h4>
-											<p>	March 10, 2015</p>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="post-wrapper d-flex">
-										<div class="thumb">
-											<a href="blog-details.html"><img src="{{ asset('public/frontend_assets/images/blog/sm-img/5.jpg') }}" alt="blog images"></a>
-										</div>
-										<div class="content">
-											<h4><a href="blog-details.html">Blog image post</a></h4>
 											<p>	March 10, 2015</p>
 										</div>
 									</div>
@@ -223,39 +191,6 @@
 									</div>
 								</div>
 							</li>
-							<li>
-								<div class="post-wrapper">
-									<div class="thumb">
-										<img src="{{ asset('public/frontend_assets/images/blog/comment/1.jpeg') }}" alt="Comment images">
-									</div>
-									<div class="content">
-										<p>Irin says:</p>
-										<a href="#">Quisque semper nunc vitae...</a>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="post-wrapper">
-									<div class="thumb">
-										<img src="{{ asset('public/frontend_assets/images/blog/comment/1.jpeg') }}" alt="Comment images">
-									</div>
-									<div class="content">
-										<p>Boighor says:</p>
-										<a href="#">Quisque semper nunc vitae...</a>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="post-wrapper">
-									<div class="thumb">
-										<img src="{{ asset('public/frontend_assets/images/blog/comment/1.jpeg') }}" alt="Comment images">
-									</div>
-									<div class="content">
-										<p>demo says:</p>
-										<a href="#">Quisque semper nunc vitae...</a>
-									</div>
-								</div>
-							</li>
 						</ul>
 					</aside>
 					<!-- End Single Widget -->
@@ -266,10 +201,6 @@
 							<li><a href="#">Fashion</a></li>
 							<li><a href="#">Creative</a></li>
 							<li><a href="#">Electronics</a></li>
-							<li><a href="#">Kids</a></li>
-							<li><a href="#">Flower</a></li>
-							<li><a href="#">Books</a></li>
-							<li><a href="#">Jewelle</a></li>
 						</ul>
 					</aside>
 					<!-- End Single Widget -->
@@ -279,9 +210,6 @@
 						<ul>
 							<li><a href="#">March 2015</a></li>
 							<li><a href="#">December 2014</a></li>
-							<li><a href="#">November 2014</a></li>
-							<li><a href="#">September 2014</a></li>
-							<li><a href="#">August 2014</a></li>
 						</ul>
 					</aside>
 					<!-- End Single Widget -->

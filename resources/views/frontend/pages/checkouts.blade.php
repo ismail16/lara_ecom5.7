@@ -119,8 +119,8 @@
 						<ul class="order_product" style="height:100px; overflow:auto; background-color: #fdfbfb;">
 							@foreach (App\Models\Cart::totalCarts() as $cart)
 							<li style=""> {{ $cart->product->title }} × {{ $cart->product_quantity }}<span>{{ $cart->product->price*$cart->product_quantity }}-tk</span></li>
-							<input type="text" name="product_quantity[]" value="{{ $cart->product_quantity }}">
-							<input type="text" name="order_products[]" value="{{ $cart->product->id }}">
+							<input type="hidden" name="product_quantity[]" value="{{ $cart->product_quantity }}">
+							<input type="hidden" name="order_products[]" value="{{ $cart->product->id }}">
 							@endforeach
 						</ul>
 						<ul class="shipping__method">
